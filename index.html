@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./promise.js"></script>
+    <script src="./script.js"></script>
+    <script src="./sync.js"></script>
+    <script src="./async.js"></script>
+    <title>Promises</title>
+</head>
+
+<body>
+    <div id="buttons">
+        <div class="d-flex center-div">
+            <button class="btn btn-orange bold-text" onclick="doAssignmentAsync()">I will do the assignment
+                (Async)</button>
+            <button class="btn btn-blue bold-text" onclick="doAssignmentSync()">I will do the assignment
+                (Sync)</button>
+
+            <div id="timer" style="display: none;"><span id="seconds"></span>&nbsp;Seconds</div>
+
+        </div>
+        <div class="center-div">
+            <div class="timer-clock" id="timer-clock"></div>
+        </div>
+    </div>
+    <div class="center-div" id="loading" style="display: none;"></div>
+
+    <div id="feedback-form" class="d-flex center-div" style="display: none;">
+        <p>Were You successful?</p>
+        <button onclick="pageState.feedbackValue = 'success'" class="btn btn-green">Succces</button>
+        <button onclick="pageState.feedbackValue = 'failure'" class="btn btn-red">Failure</button>
+    </div>
+</body>
+
+</html>
